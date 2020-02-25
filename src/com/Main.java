@@ -8,12 +8,16 @@ public class Main {
 	public static void main(String[] args) {
 		int[] firstTest = { 1, 3, 6, 4, 1, 2 };
 		int[] secondTest = { 1, 2, 3 };
+		int[] thirdTest = { -1, -3 };
 		
 		int firstResult = solution(firstTest);
 		System.out.println("First Result: " + firstResult);
 		
 		int secondResult = solution(secondTest);
 		System.out.println("Second Result: " + secondResult);
+		
+		int thirdResult = solution(thirdTest);
+		System.out.println("Third Result: " + thirdResult);
 	}
 	
 	private static int solution(int[] firstTest) {
@@ -34,6 +38,7 @@ public class Main {
 				}
 			}
 		}
+		
 		if (smallest_Positive == 0){
 			smallest_Positive = list.size()+1;
 		}
