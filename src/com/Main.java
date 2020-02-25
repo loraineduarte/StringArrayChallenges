@@ -1,9 +1,7 @@
 package com;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
+import com.array.SmallestPositive;
+
 
 public class Main {
 	
@@ -14,43 +12,21 @@ public class Main {
 		int[] fourthTest = {-1};
 		int[] fifthTest = { 1};
 		
-		int firstResult = solution(firstTest);
+		int firstResult = SmallestPositive.solution((firstTest));
 		System.out.println("First Result: " + firstResult);
 		
-		int secondResult = solution(secondTest);
+		int secondResult = SmallestPositive.solution((secondTest));
 		System.out.println("Second Result: " + secondResult);
 		
-		int thirdResult = solution(thirdTest);
+		int thirdResult = SmallestPositive.solution((thirdTest));
 		System.out.println("Third Result: " + thirdResult);
 		
-		int fourthResult = solution(fourthTest);
+		int fourthResult = SmallestPositive.solution(fourthTest);
 		System.out.println("Fourth Result: " + fourthResult);
 		
-		int fifthResult = solution(fifthTest);
+		int fifthResult = SmallestPositive.solution((fifthTest));
 		System.out.println("fifth Result: " + fifthResult);
 	}
 	
-	private static int solution(int[] list) {
-		int smallest_Positive = 0;
-		Arrays.sort(list);
-		
-		for (int i = 0; i < list.length; i++) {
-			if (list.length == 1) {
-				smallest_Positive = 1;
-				break;
-			} else if (Arrays.binarySearch(list, i) < 0){
-				if(smallest_Positive == 0){
-					smallest_Positive = i;
-				} else if( i <= smallest_Positive){
-					smallest_Positive = i;
-				}
-			}
-		}
-		
-		if (smallest_Positive == 0){
-			smallest_Positive = list.length+1;
-		}
-		//System.out.println("Smallest: " + smallest_Positive);
-		return smallest_Positive;
-	}
+
 }
