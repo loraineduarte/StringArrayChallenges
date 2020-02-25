@@ -31,8 +31,11 @@ public class Main {
 					smallest_Positive = i;
 				} else if( i < smallest_Positive){
 					smallest_Positive = i;
-				} 
+				}
 			}
+		}
+		if (smallest_Positive == 0){
+			smallest_Positive = list.size()+1;
 		}
 		System.out.println("Smallest: " + smallest_Positive);
 		return smallest_Positive;
